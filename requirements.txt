@@ -1,6 +1,7 @@
 altair==5.5.0
 certifi==2020.6.20
 networkx==2.5
+numpy==1.24.4
 plotly==6.2.0
 pyvis==0.3.2
 streamlit==1.40.1
