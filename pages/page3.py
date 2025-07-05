@@ -1,9 +1,9 @@
 import streamlit as st
 import networkx as nx
+import plotly.graph_objects as go
 from pyvis.network import Network
 import tempfile
 import base64
-
 
 
 # 页面配置
@@ -375,4 +375,4 @@ with col2:
 
 # 页脚
 st.markdown("---")
-st.caption("© 2025 《RPA财务机器人开发与应用》课程知识图谱 | 设计与开发")    
+
