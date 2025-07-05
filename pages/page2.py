@@ -4,7 +4,6 @@ import re
 import websockets
 import uuid
 import json
-import os
 from tencentcloud.common import credential
 from tencentcloud.common.profile.client_profile import ClientProfile
 from tencentcloud.common.profile.http_profile import HttpProfile

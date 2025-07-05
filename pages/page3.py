@@ -1,14 +1,10 @@
 import streamlit as st
-import pandas as pd
 import networkx as nx
-import matplotlib.pyplot as plt
-import plotly.graph_objects as go
 from pyvis.network import Network
 import tempfile
 import base64
 
-# 设置中文字体
-plt.rcParams["font.family"] = ["SimHei", "WenQuanYi Micro Hei", "Heiti TC"]
+
 
 # 页面配置
 st.set_page_config(
@@ -85,7 +81,7 @@ def get_knowledge_graph_data(topic):
     nodes = [
         {"id": "RPA财务机器人", "group": "核心", "title": "RPA财务机器人", 
          "description": "机器人流程自动化(RPA)在财务领域的应用，通过软件机器人自动执行重复性财务任务。"},
-        {"id": "UiPath", "group": "工具", "title": "UiPath", 
+        {"id": "UiBot", "group": "工具", "title": "UiBot", 
          "description": "领先的RPA平台，提供可视化设计器和强大的自动化功能。"},
         {"id": "Automation Anywhere", "group": "工具", "title": "Automation Anywhere", 
          "description": "企业级RPA平台，支持复杂流程自动化。"},
@@ -101,7 +97,7 @@ def get_knowledge_graph_data(topic):
     
     # 边的关系
     edges = [
-        {"from": "RPA财务机器人", "to": "UiPath", "label": "常用工具"},
+        {"from": "RPA财务机器人", "to": "UiBot", "label": "常用工具"},
         {"from": "RPA财务机器人", "to": "Automation Anywhere", "label": "常用工具"},
         {"from": "RPA财务机器人", "to": "Blue Prism", "label": "常用工具"},
         {"from": "RPA财务机器人", "to": "Python", "label": "开发语言"},
@@ -126,8 +122,8 @@ def get_knowledge_graph_data(topic):
             {"from": "RPA财务机器人", "to": "流程挖掘", "label": "依赖技术"},
             {"from": "RPA财务机器人", "to": "OCR技术", "label": "常用技术"},
             {"from": "RPA财务机器人", "to": "AI与RPA集成", "label": "技术趋势"},
-            {"from": "自动化基础", "to": "UiPath", "label": "工具实现"},
-            {"from": "OCR技术", "to": "UiPath", "label": "工具支持"}
+            {"from": "自动化基础", "to": "UiBot", "label": "工具实现"},
+            {"from": "OCR技术", "to": "UiBot", "label": "工具支持"}
         ])
         
     elif topic == "财务流程自动化":
@@ -190,7 +186,7 @@ def get_knowledge_graph_data(topic):
             {"from": "RPA财务机器人", "to": "API调用", "label": "技术手段"},
             {"from": "RPA财务机器人", "to": "机器学习模型", "label": "技术扩展"},
             {"from": "RPA财务机器人", "to": "区块链技术", "label": "技术扩展"},
-            {"from": "ERP系统集成", "to": "UiPath", "label": "工具支持"},
+            {"from": "ERP系统集成", "to": "UiBot", "label": "工具支持"},
             {"from": "API调用", "to": "Python", "label": "实现语言"},
             {"from": "机器学习模型", "to": "Python", "label": "实现语言"}
         ])
