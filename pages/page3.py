@@ -6,8 +6,6 @@ from pyvis.network import Network
 import tempfile
 import base64
 
-# 设置中文字体
-plt.rcParams["font.family"] = ["SimHei", "WenQuanYi Micro Hei", "Heiti TC"]
 
 # 页面配置
 st.set_page_config(
